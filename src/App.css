@@ -1,39 +1,99 @@
 .App {
+  width: 100%;
+  height: 100vh;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
 }
-
-.App-link {
-  color: rgb(112, 76, 182);
+.ds-flex{
+  display: flex;
 }
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.flex-column{
+  flex-direction: column;
+}
+.align-items-center{
+  align-items: center;
+}
+.justify-content-center{
+  justify-content: center;
+}
+.mg-l{
+  margin-left: 15px;
+}
+.mg-r{
+  margin-right: 15px;
+}
+.mg-b-0{
+  margin-bottom: 0;
+}
+.button_color_light-green{
+  background-color: #00B793;
+  border-color: #00B793;
+  color: #ffffff;
+}
+.button_color_light-green:hover,
+.button_color_light-green:active,
+.button_color_light-green:focus{
+  background-color: #00B793;
+  border-color: #00B793;
+  color: #ffffff;
+  opacity: .8;
+}
+.button_color_green{
+  background-color: #269F00;
+  border-color: #269F00;
+  color: #ffffff;
+}
+.button_color_green:hover,
+.button_color_green:active,
+.button_color_green:focus{
+  background-color: #269F00;
+  border-color: #269F00;
+  color: #ffffff;
+  opacity: .8;
+}
+.button_color_red{
+  background-color: #FF0700;
+  border-color: #FF0700;
+  color: #ffffff;
+}
+.button_color_red:hover,
+.button_color_red:active,
+.button_color_red:focus{
+  background-color: #FF0700;
+  border-color: #FF0700;
+  color: #ffffff;
+  opacity: .8;
+}
+.button_type_start{
+  text-transform: uppercase;
+  border-radius: 0;
+ 
+}
+.text_size_xl{
+  font-size: 120px;
+  line-height: 160px;
+  font-weight: bold;
+}
+.ant-radio-button-wrapper{
+  border-color: #1d1d1d;
+  border-left-color: #1d1d1d;
+}
+.ant-radio-button-wrapper:hover{
+  color: #1d1d1d;
+}
+.ant-radio-button-wrapper:not(:first-child)::before{
+  background-color: #1d1d1d;
+}
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
+  border-color: #1d1d1d;
+  border-right-color: #1d1d1d !important;
+  background-color: #313131af;
+}
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover{
+  border-color: #1d1d1d;
+  border-right-color: #1d1d1d !important;
+  background-color: #313131af;
+  opacity: .8;
 }
