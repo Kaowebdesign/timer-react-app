@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   timerStatus: 'not-started',
-  timerSpeed: '1x',
+  timerSpeed: '1000',
   timerTime: 0
 };
 

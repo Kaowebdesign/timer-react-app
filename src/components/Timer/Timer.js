@@ -6,7 +6,7 @@ import { InputNumber, Button, Radio } from 'antd';
 import { useTimerEf } from './useTimerEf';
 // Elements
 import Speed from '../../elements/Speed/Speed';
-import ShowTime from '../../elements/ShowTime/ShowTime';
+import CountDown from '../../elements/CountDown/CountDown';
 
 
 const Timer = memo(() => {
@@ -28,9 +28,15 @@ const Timer = memo(() => {
                     min={0}
                     step={1}
                     />
-                <Button className="mg-l button_color_light-green button_type_start" size={'large'} onClick={handlerTimerSubmit}>Start</Button>
+                
+                <Button 
+                    className={'button_color_light-green mg-l button_type_start'}
+                    size={'large'} 
+                    onClick={() => handlerTimerSubmit()}>
+                        {status == 'started' ? 'Reset' : 'Start'}
+                </Button>
             </div>
-            <ShowTime timerType={status} />
+            <CountDown minutes={minutes} />
             <Speed value={speed} handlerChange={handlerChangeSpeed}/>
         </div>
     )

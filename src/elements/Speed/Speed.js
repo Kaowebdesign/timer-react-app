@@ -6,17 +6,17 @@ import { Radio } from 'antd';
 const defaultConfig = [
     {
         id: '1',
-        value: '1x',
+        value: '1000',
         name: '1X'
     },
     {
         id: '2',
-        value: '1.5x',
+        value: '666.66',
         name: '1.5X'
     },
     {
         id: '3',
-        value: '2x',
+        value: '500',
         name: '2X'
     },
 ]
