@@ -9,9 +9,12 @@ import {
     setStatus,
     setTime
 } from './TimerSlice'
+// Utils
+import {timerStatus} from '../../utils/config'
 
 
 export const useTimerEf = () => {
+    
     const dispatch = useDispatch();
 
      // Selectors
@@ -22,10 +25,14 @@ export const useTimerEf = () => {
     // State
 
     const [minutes, setMinutes] = useState(0);
-   
+
+
+    // Handlers
 
     const handlerTimerSubmit = () => {
-        dispatch(setStatus('started'));
+        (status === timerStatus.STARTED || status === timerStatus.PAUSE)
+            ? dispatch(setStatus(timerStatus.OVER))
+            : dispatch(setStatus(timerStatus.STARTED));
     }
 
     const handlerChangeMinutes = (value) => {

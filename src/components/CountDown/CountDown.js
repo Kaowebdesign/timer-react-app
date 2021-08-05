@@ -5,11 +5,13 @@ import { Button } from 'antd';
 // Ant Icon
 import { PauseOutlined, CaretRightOutlined } from '@ant-design/icons';
 import { useCountDownEf } from './useCountDownEf';
+// Utils
+import {timerStatus} from '../../utils/config'
 
 
-const CountDown = memo(({timerType = 'not-started', minutes = 0, seconds = 0}) => {
+const CountDown = memo(({status, speed, setMinutes, minutes = 0, seconds = 0}) => {
 
-    const {m,s} = useCountDownEf({minutes, seconds});
+    const {m,s, handlerPauseTimer} = useCountDownEf({minutes, seconds, status, speed, setMinutes});
 
     const formatTime = (minutes, seconds) => {
 
@@ -26,12 +28,13 @@ const CountDown = memo(({timerType = 'not-started', minutes = 0, seconds = 0}) =
                 <span className="text text_size_xl">{formatTime(m, s)}</span>
             </div>
             {
-                timerType !== 'not-started' &&
+                (status !== timerStatus.STOP && status !== timerStatus.OVER) &&
                     <Button 
-                        className={`mg-l button_color_green ${timerType}`}
+                        className={`mg-l ${status === timerStatus.STARTED ? 'button_color_red' : 'button_color_green'}`}
                         size={'large'}
                         shape="circle"
-                        icon={timerType === 'start' ? <PauseOutlined/> : <CaretRightOutlined />}
+                        onClick={handlerPauseTimer}
+                        icon={status === timerStatus.STARTED ? <PauseOutlined/> : <CaretRightOutlined />}
                     />
             }
            

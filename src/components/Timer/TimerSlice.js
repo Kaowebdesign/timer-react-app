@@ -1,10 +1,11 @@
 // Core
 import { createSlice } from '@reduxjs/toolkit';
+// Utils
+import {timerStatus} from '../../utils/config'
 
 const initialState = {
-  timerStatus: 'not-started',
+  timerStatus: timerStatus.STOP,
   timerSpeed: '1000',
-  timerTime: 0
 };
 
 
@@ -19,13 +20,10 @@ export const timerSlice = createSlice({
     setSpeed: (state, action) => {
       state.timerSpeed = action.payload;
     },
-    setTime: (state, action) => {
-      state.timerTime = action.payload
-    }
   },
 });
 
-export const { setStatus, setSpeed, setTime } = timerSlice.actions;
+export const { setStatus, setSpeed } = timerSlice.actions;
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
