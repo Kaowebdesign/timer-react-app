@@ -25,12 +25,14 @@ const CountDown = memo(({status, speed, setMinutes, minutes = 0, seconds = 0}) =
     return (
         <div className="ds-flex align-items-center">
             <div className="ds-flex align-items-center"> 
-                <span className="text text_size_xl">{formatTime(m, s)}</span>
+                <span className={`text text_size_xl ${(status == timerStatus.STARTED && m === 0 && s <= 10) && 'red'}`}>
+                    {formatTime(m, s)}
+                </span>
             </div>
             {
                 (status !== timerStatus.STOP && status !== timerStatus.OVER) &&
                     <Button 
-                        className={`mg-l ${status === timerStatus.STARTED ? 'button_color_red' : 'button_color_green'}`}
+                        className={'mg-l button_color_green'}
                         size={'large'}
                         shape="circle"
                         onClick={handlerPauseTimer}

@@ -71,6 +71,9 @@
   border-radius: 0;
  
 }
+.text.red{
+  color: #FF0700;
+}
 .text_size_xl{
   font-size: 120px;
   line-height: 160px;

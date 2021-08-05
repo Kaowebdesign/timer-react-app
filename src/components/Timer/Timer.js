@@ -32,7 +32,7 @@ const Timer = memo(() => {
                     />
                 
                 <Button 
-                    className={'button_color_light-green mg-l button_type_start'}
+                    className={`mg-l button_type_start ${(status == timerStatus.STARTED || status == timerStatus.PAUSE) ? 'button_color_red' : 'button_color_light-green'}`}
                     size={'large'} 
                     onClick={() => handlerTimerSubmit()}>
                         {(status == timerStatus.STARTED || status == timerStatus.PAUSE) ? 'Reset' : 'Start'}

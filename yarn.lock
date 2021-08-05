@@ -1125,7 +1125,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.1", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.14.8", "@babel/runtime@^7.5.1", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.10.1", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.9.2":
   version "7.14.8"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.8.tgz#7119a56f421018852694290b9f9148097391b446"
   integrity sha512-twj3L8Og5SaCRCErB4x4ajbvBIVV77CGeFglHpeg5WC5FF8TZzBWXtTJ4MqaD9QszLYTtr+IsaAL2rEUevb+eg==
@@ -5117,14 +5117,6 @@ fast-levenshtein@^2.0.6, fast-levenshtein@~2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
-
-fast-unique-numbers@^6.0.4:
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/fast-unique-numbers/-/fast-unique-numbers-6.0.4.tgz#dda3a16d31485a4fd1e9bd2941fd316634db8eb6"
-  integrity sha512-pBaZZp1n5ULp44rAzMhwejTfTWXQYO4ZTG/bHyrnHeNt+A5jF09MXHs0uoJvNyuaZBkYaHTAPyvFlKhp2xzqfA==
-  dependencies:
-    "@babel/runtime" "^7.14.8"
-    tslib "^2.3.0"
 
 fastq@^1.6.0:
   version "1.10.1"
@@ -9617,11 +9609,6 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
-react-countdown-hook@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-countdown-hook/-/react-countdown-hook-1.1.0.tgz#190dd48e3715c4c6cf5f2047a59874b2edce8318"
-  integrity sha512-qK9yIbJ+g0Gk/tAkXT0fXpfW2DiN/xyWePGtWtA3Bl19ZM7zsCOttXGMg+DTa0cNx4Yn/1WRwNuXng+QDs5ygw==
-
 react-dev-utils@^11.0.3:
   version "11.0.4"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-11.0.4.tgz#a7ccb60257a1ca2e0efe7a83e38e6700d17aa37a"
@@ -11294,11 +11281,6 @@ tslib@^2.0.3:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.1.0.tgz#da60860f1c2ecaa5703ab7d39bc05b6bf988b97a"
   integrity sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
 
-tslib@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
-  integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
-
 tsutils@^3.17.1:
   version "3.20.0"
   resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-3.20.0.tgz#ea03ea45462e146b53d70ce0893de453ff24f698"
@@ -12037,34 +12019,6 @@ worker-rpc@^0.1.0:
   integrity sha512-P1WjMrUB3qgJNI9jfmpZ/htmBEjFh//6l/5y8SD9hg1Ef5zTTVVoRjTrTEzPrNBQvmhMxkoTsjOXN10GWU7aCg==
   dependencies:
     microevent.ts "~0.1.1"
-
-worker-timers-broker@^6.0.56:
-  version "6.0.56"
-  resolved "https://registry.yarnpkg.com/worker-timers-broker/-/worker-timers-broker-6.0.56.tgz#47e06808307fe72fc8d9a2d82040bd47c7d9d80b"
-  integrity sha512-HG8ht2HvXqlgwsbCrbXK2QjbWGNmWk59hA+IprGcgme6FFKgftaDi3q310GDAwPx1fhdkXageVfwbKJ1H4EZAg==
-  dependencies:
-    "@babel/runtime" "^7.14.8"
-    fast-unique-numbers "^6.0.4"
-    tslib "^2.3.0"
-    worker-timers-worker "^7.0.24"
-
-worker-timers-worker@^7.0.24:
-  version "7.0.24"
-  resolved "https://registry.yarnpkg.com/worker-timers-worker/-/worker-timers-worker-7.0.24.tgz#031b3be16a7e4abd403cb2a63183d2f48a8bc201"
-  integrity sha512-5nmVKMPxl+oiF55PiqiCCwNid3q3HYE7TEQ0ZuHyeitQw76qU+9EbcNSt8AQXiVFY91zMu/yTemanmDUfuKteQ==
-  dependencies:
-    "@babel/runtime" "^7.14.8"
-    tslib "^2.3.0"
-
-worker-timers@^7.0.35:
-  version "7.0.35"
-  resolved "https://registry.yarnpkg.com/worker-timers/-/worker-timers-7.0.35.tgz#ade59e8ca815edc48fb8c5c667aaf49b2c632a0a"
-  integrity sha512-gt/7GVnnDt/9kuPOiUCtbFDtBI2cGysOhlXa0apAbXLKJ8UZgndnoJK1dzxPjyv67Pq4jLdFa0pz2lQTko++Lw==
-  dependencies:
-    "@babel/runtime" "^7.14.8"
-    tslib "^2.3.0"
-    worker-timers-broker "^6.0.56"
-    worker-timers-worker "^7.0.24"
 
 wrap-ansi@^5.1.0:
   version "5.1.0"
